@@ -280,6 +280,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initSvgDownload();
   initThemeToggle();
   initTactileFoundry();
+  initTaglineLab();
 
   // Populate Photo Select in Mockup controls
   populateMockupPhotoSelect();
@@ -832,6 +833,37 @@ function initTactileFoundry() {
         preview.className = `tactile-preview surface-${surface}`;
       });
       showToast(`Switched preview surface to ${surface.toUpperCase()}`);
+    });
+  });
+}
+
+function initTaglineLab() {
+  const pills = document.querySelectorAll(".tagline-pill");
+  const img = document.getElementById("activeTaglineImg");
+  const descEl = document.getElementById("activeTaglineDescription");
+  const downloadBtn = document.getElementById("btnDownloadActiveTagline");
+
+  if (!pills.length || !img) return;
+
+  pills.forEach(pill => {
+    pill.addEventListener("click", () => {
+      pills.forEach(p => p.classList.remove("active"));
+      pill.classList.add("active");
+
+      const svgPath = pill.dataset.svg;
+      const desc = pill.dataset.desc;
+      const title = pill.querySelector("strong").textContent;
+
+      img.src = svgPath;
+      if (downloadBtn) {
+        downloadBtn.href = svgPath;
+        downloadBtn.download = svgPath.split("/").pop();
+      }
+      if (descEl) {
+        descEl.innerHTML = `<strong>${title}:</strong> ${desc}`;
+      }
+
+      showToast(`Selected descriptor: ${title}`);
     });
   });
 }

@@ -3,7 +3,7 @@
 > Copy and paste this prompt directly into **Lovable.dev** (or **v0.dev** / **Bolt.new**) to generate the official website for Tunkow.
 
 ```markdown
-Build a world-class, responsive official website for the Latin Ska band **TUNKOW** (a 9-piece brass ensemble based in Berlin, formerly Bodgo Skatz).
+Build a world-class, responsive official website for the Latin Ska band **TUNKOW** (Berlin-based Latin Ska ensemble, formerly Bodgo Skatz).
 
 ### 🏛️ Brand & Aesthetic (Andean Modernist)
 - **Concept:** Andean Modernism — architectural, minimalist, museum-grade aesthetic inspired by pre-Columbian Andean monoliths and Swiss International Style, combined with the raw live energy of the Berlin underground.
@@ -24,16 +24,16 @@ Build a world-class, responsive official website for the Latin Ska band **TUNKOW
 
 1. **Sticky Header & Navigation:**
    - Brand Logo: The TUNKOW wordmark with Tunqui crest icon.
-   - Nav Links: Music, Tour Dates, The 9-Piece, Merch, EPK / Booking.
+   - Nav Links: Music, Tour Dates, The Ensemble, Merch, EPK / Booking.
    - Right Actions: Language Switcher (EN | ES | DE), Light/Dark Mode toggle (Gallery White vs. Dark Stage), and a bold red "TICKETS" button.
 
 2. **Hero Section (Luminous & High-Impact):**
    - Airy gallery white layout with high-contrast, editorial framing of the band performing live under warm concert lights.
-   - Massive headline: "T U N K O W" with the tagline: "9-PIECE LATIN SKA & BRASS FORCE &bull; BERLIN".
+   - Massive headline: "T U N K O W" with the tagline: "EL LEK URBANO &bull; BERLIN".
    - Primary Call to Action: "GET TOUR TICKETS" + "LISTEN TO NEW SINGLE".
    - Live Audio Player Bar: Embedded preview bar with play/pause, scrubbable progress bar, volume control, and animated audio equalizer wave for the track *"El Salto del Tunqui"*.
 
-3. **The 9-Piece Musician Showcase:**
+3. **The Musician Ensemble Showcase:**
    - Interactive grid/carousel highlighting the band members and instrumentation:
      - Horn Section: Trumpet, Saxophone, Trombone
      - Rhythm Section: Drums, Congas/Percussion, Bass
