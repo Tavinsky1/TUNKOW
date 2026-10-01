@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <!-- TUNKOW — Edition 4 Exact Geometry: Letterpress & Deep Ink Bite Edition -->
+  <defs>
+    <!-- Letterpress Deboss / Paper Tooth Filter -->
+    <filter id="letterpress-deboss" x="-10%" y="-10%" width="120%" height="120%">
+      <!-- Paper grain -->
+      <feTurbulence type="fractalNoise" baseFrequency="0.09" numOctaves="3" result="paperNoise" />
+      <feDisplacementMap in="SourceGraphic" in2="paperNoise" scale="1.8" xChannelSelector="R" yChannelSelector="G" result="debossEdge" />
+      <!-- Subtle press depth shadow -->
+      <feDropShadow dx="1.2" dy="1.8" stdDeviation="1" flood-color="#000000" flood-opacity="0.45" />
+    </filter>
+  </defs>
+
+  <g filter="url(#letterpress-deboss)">
+    <!-- Base Ring: Exact Edition 4 Coordinates (cx:100, cy:100, r:92) -->
+    <circle cx="100" cy="100" r="92" fill="#141518" stroke="#D81616" stroke-width="5.5" />
+
+    <!-- Tunqui Fan Crest: Exact Edition 4 Coordinates (cx:100, cy:94, r:54) with Rich Ink Saturation -->
+    <circle cx="100" cy="94" r="54" fill="#D81616" />
+
+    <!-- Minimalist Geometric Beak Wedge: Exact Edition 4 Coordinates (112,94 170,106 112,122) -->
+    <polygon points="112,94 170,106 112,122" fill="#FAF6EE" stroke="#141518" stroke-width="1.2" />
+
+    <!-- Bird Eye Coordinate: Exact Edition 4 Coordinates (cx:86, cy:90, r:10) -->
+    <circle cx="86" cy="90" r="10" fill="#141518" />
+    <circle cx="89" cy="88" r="3.5" fill="#FAF6EE" />
+  </g>
+</svg>

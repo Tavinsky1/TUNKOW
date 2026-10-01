@@ -994,6 +994,23 @@ body {
   font-weight: 700;
 }
 
+.featured-edition {
+  border-color: var(--color-primary) !important;
+  box-shadow: 0 0 28px rgba(216, 22, 22, 0.25) !important;
+}
+
+.pill-tag {
+  background: var(--color-primary);
+  color: #FFFFFF;
+  font-size: 0.58rem;
+  font-family: var(--font-sub);
+  font-weight: 800;
+  padding: 0.18rem 0.45rem;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.05em;
+  display: inline-block;
+}
+
 .tactile-meta h4 {
   font-family: var(--font-sub);
   font-size: 1.05rem;

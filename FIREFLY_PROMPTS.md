@@ -13,8 +13,8 @@ To avoid the "flat vector / digital clipart" look, configure the Firefly sidebar
 | **Content Type** | **Art** (or **Photo**) | ⚠️ **Never select "Graphic"** — Graphic forces flat vector Bézier lines. "Art" or "Photo" forces physical media and lighting. |
 | **Aspect Ratio** | **Square (1:1)** | Best for logo badges, crest medallions, and vinyl center labels. |
 | **Visual Intensity** | **4 / 5 or 5 / 5** | Maximizes paper fiber, chisel marks, ink bleed, and micro-texture. |
-| **Structure Reference** | Upload `assets/tunkow-crest-artisan.svg` or `tunqui_icon.jpg` (Strength: 65%–80%) | Locks in the exact silhouette of the Tunqui bird and disc crest while applying new physical materials. |
-| **Effects (in Firefly)** | *Woodblock print*, *Linocut*, *Etching*, or *Clay/Metal* | Adds organic artisanal grain. |
+| **Structure Reference** | Upload `assets/tunkow-crest.svg` or `assets/tunkow-crest-ed4-riso.svg` (Strength: **80%–90%**) | **Crucial:** Locks in the exact Edition 4 geometry (disc crest + wedge beak) while applying new physical materials without altering the silhouette. |
+| **Effects (in Firefly)** | *Woodblock print*, *Linocut*, *Etching*, *Screenprint*, or *Stamp* | Adds organic artisanal grain. |
 
 ---
 

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <!-- TUNKOW — Edition 4 Exact Geometry: 2-Color Risograph Plate Shift Edition -->
+  <defs>
+    <!-- Analog soy ink texture & paper tooth -->
+    <filter id="ed4-shift-texture" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.08" numOctaves="3" result="grain" />
+      <feDisplacementMap in="SourceGraphic" in2="grain" scale="2.2" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </defs>
+
+  <!-- Group with ink texture -->
+  <g filter="url(#ed4-shift-texture)">
+    <!-- BLACK INK DRUM (Plate 01: Carbon Soot) -->
+    <!-- Base Ring: Exact Edition 4 Coordinates (cx:100, cy:100, r:92) -->
+    <circle cx="100" cy="100" r="92" fill="#101114" />
+
+    <!-- Red Beak Underlay Cutout (Exact Edition 4) -->
+    <polygon points="112,94 170,106 112,122" fill="#F4EFEA" />
+
+    <!-- Eye Black Pupil: Exact Edition 4 -->
+    <circle cx="86" cy="90" r="10" fill="#101114" />
+    <circle cx="89" cy="88" r="3.5" fill="#F4EFEA" />
+
+    <!-- SCARLET INK DRUM (Plate 02: Tunqui Scarlet with authentic 2.5px mechanical riso misregistration) -->
+    <!-- Outer accent ring plate shift -->
+    <circle cx="101.5" cy="98.5" r="92" fill="none" stroke="#D81616" stroke-width="5" opacity="0.95" style="mix-blend-mode: screen;" />
+
+    <!-- The Tunqui Fan Crest: Exact Edition 4 Coordinates (cx:100, cy:94, r:54) shifted slightly (dx:+2, dy:-1.5) -->
+    <circle cx="102" cy="92.5" r="54" fill="#D81616" opacity="0.92" style="mix-blend-mode: screen;" />
+    
+    <!-- Secondary Beak Register Line -->
+    <polygon points="114,92.5 172,104.5 114,120.5" fill="none" stroke="#D81616" stroke-width="1.5" opacity="0.8" />
+  </g>
+</svg>
