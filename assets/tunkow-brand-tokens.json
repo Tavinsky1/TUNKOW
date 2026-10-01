@@ -1,0 +1,90 @@
+{
+  "brand": {
+    "name": "TUNKOW",
+    "origin": "Rebrand of Bodgo Skatz",
+    "concept": "Andean Modernist (Direction C)",
+    "etymology": "Tunqui (Andean Cock-of-the-rock / Rupicola peruvianus) — Peru's national bird, symbol of high energy, vibrant plumage, and hypnotic communal lek dances."
+  },
+  "colors": {
+    "primary": {
+      "name": "Tunqui Cinnabar (Surgical Scarlet)",
+      "hex": "#D81616",
+      "rgb": "216, 22, 22",
+      "hsl": "0, 82%, 47%",
+      "cmyk": "0, 95, 95, 15",
+      "pantone": "Pantone Warm Red C",
+      "usage": "Singular accent mark, vinyl center label, buttons, tour alert badges, crest plumage."
+    },
+    "surfaceDark": {
+      "name": "Basalt Monolith",
+      "hex": "#0C0D0F",
+      "rgb": "12, 13, 15",
+      "hsl": "220, 11%, 5%",
+      "usage": "Primary stage backdrop, website background, vinyl sleeve outer base, heavy merch."
+    },
+    "surfaceMid": {
+      "name": "Obsidian Surface",
+      "hex": "#141518",
+      "rgb": "20, 21, 24",
+      "usage": "Card panels, dialog surfaces, table rows, button backgrounds."
+    },
+    "textMain": {
+      "name": "Chalk White",
+      "hex": "#FAFAFA",
+      "rgb": "250, 250, 250",
+      "usage": "Primary headline typography, high-contrast logo marks, crisp negative space."
+    },
+    "textMuted": {
+      "name": "Andean Mist Grey",
+      "hex": "#9A9FA8",
+      "rgb": "154, 159, 168",
+      "usage": "Subheads, tour dates, technical credits, metadata, borders."
+    }
+  },
+  "typography": {
+    "display": {
+      "family": "Unbounded",
+      "weights": ["700", "800", "900"],
+      "letterSpacing": "0.18em",
+      "usage": "Main band logo, album titles, festival billboard headlines."
+    },
+    "subheading": {
+      "family": "Space Grotesk",
+      "weights": ["500", "700"],
+      "letterSpacing": "0.08em",
+      "usage": "Tour venues, track titles, date metadata, navigation links."
+    },
+    "body": {
+      "family": "Plus Jakarta Sans",
+      "weights": ["400", "600"],
+      "usage": "Band biography, editorial reviews, press releases, website body."
+    }
+  },
+  "photoTreatment": {
+    "style": "Monolith Silver Monochrome + Surgical Red",
+    "recipe": {
+      "grayscale": "100%",
+      "contrast": "135%",
+      "brightness": "90%",
+      "highlights": "Clean silver whites",
+      "shadows": "Deep crushed basalt blacks",
+      "graphicAccent": "Single circular Tunqui crest or red rule (#D81616)"
+    }
+  },
+  "merchandise": {
+    "tshirt": {
+      "color": "Basalt Black (washed 240gsm) & Canvas Bone",
+      "print": "Discharge / water-based scarlet screenprint with soft hand-feel",
+      "front": "Tunqui Disc Crest (8cm left chest) or Center Chest (22cm)",
+      "back": "European Tour Dates in Space Grotesk"
+    },
+    "vinyl": {
+      "format": "12-inch 180g Heavyweight Vinyl",
+      "sleeve": "350gsm uncoated reverse board with spot UV or red foil stamp",
+      "centerLabel": "Solid Tunqui Red on Side A, Deep Basalt on Side B"
+    },
+    "enamelPin": {
+      "finish": "Gunmetal black nickel with recessed hard red enamel fill (#D81616)"
+    }
+  }
+}

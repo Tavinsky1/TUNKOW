@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 120" width="100%" height="100%">
+  <!-- TUNKOW Andean Modernist Official Wordmark -->
+  <defs>
+    <style>
+      .brand-text {
+        font-family: 'Unbounded', 'Space Grotesk', -apple-system, sans-serif;
+        font-weight: 800;
+        font-size: 58px;
+        letter-spacing: 12px;
+        fill: #FAFAFA;
+      }
+      .accent-circle {
+        fill: #D81616;
+      }
+      .meta-text {
+        font-family: 'Space Grotesk', monospace;
+        font-size: 11px;
+        letter-spacing: 6px;
+        fill: #9A9FA8;
+        text-transform: uppercase;
+      }
+    </style>
+  </defs>
+
+  <!-- Wordmark Letters -->
+  <text x="270" y="72" text-anchor="middle" class="brand-text">T U N K O W</text>
+  
+  <!-- Surgical Tunqui Red Accent Anchor -->
+  <circle cx="270" cy="94" r="5" class="accent-circle" />
+
+  <!-- Subtitle Tagline -->
+  <text x="270" y="112" text-anchor="middle" class="meta-text">ANDEAN BRASS VANGUARD &bull; BERLIN</text>
+</svg>

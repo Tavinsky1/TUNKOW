@@ -1,0 +1,36 @@
+/* ==========================================================================
+   TUNKOW — OFFICIAL ANDEAN MODERNIST DESIGN TOKENS (CSS)
+   ========================================================================== */
+
+:root {
+  /* Colors */
+  --tunkow-red-cinnabar: #D81616;
+  --tunkow-red-glow: rgba(216, 22, 22, 0.28);
+  --tunkow-black-basalt: #0C0D0F;
+  --tunkow-black-surface: #141518;
+  --tunkow-grey-mist: #9A9FA8;
+  --tunkow-white-chalk: #FAFAFA;
+  --tunkow-border-subtle: #24262C;
+
+  /* Fonts */
+  --tunkow-font-display: 'Unbounded', 'Space Grotesk', -apple-system, sans-serif;
+  --tunkow-font-sub: 'Space Grotesk', sans-serif;
+  --tunkow-font-body: 'Plus Jakarta Sans', -apple-system, sans-serif;
+
+  /* Typography Scale */
+  --tunkow-text-hero: clamp(3rem, 8vw, 6.5rem);
+  --tunkow-text-h1: clamp(2.2rem, 5vw, 4rem);
+  --tunkow-text-h2: clamp(1.6rem, 3.5vw, 2.5rem);
+  --tunkow-text-body: 1rem;
+  --tunkow-text-meta: 0.75rem;
+
+  /* Spacing */
+  --tunkow-space-xs: 0.5rem;
+  --tunkow-space-sm: 1rem;
+  --tunkow-space-md: 1.5rem;
+  --tunkow-space-lg: 3rem;
+  --tunkow-space-xl: 6rem;
+
+  /* Photo Grading Filter */
+  --tunkow-photo-grade: grayscale(100%) contrast(135%) brightness(90%);
+}

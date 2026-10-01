@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en" data-direction="c">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TUNKOW — Brand Identity & Visual Direction Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Load fonts for all 3 directions -->
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Outfit:wght@400;600;800;900&family=Plus+Jakarta+Sans:wght@400;600;700&family=Space+Grotesk:wght@500;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@700;800&family=Unbounded:wght@600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- SVG Filter Definitions for Live Photo Grading -->
+  <svg style="position: absolute; width: 0; height: 0; pointer-events: none;">
+    <defs>
+      <!-- Direction A: Risograph Duotone (Scarlet Red & Carbon Ink) with Grain -->
+      <filter id="riso-duotone">
+        <feColorMatrix type="matrix" values="
+          0.33 0.33 0.33 0 0
+          0.33 0.33 0.33 0 0
+          0.33 0.33 0.33 0 0
+          0    0    0    1 0" />
+        <feComponentTransfer color-interpolation-filters="sRGB">
+          <feFuncR type="table" tableValues="0.05 0.92 0.98" />
+          <feFuncG type="table" tableValues="0.06 0.12 0.20" />
+          <feFuncB type="table" tableValues="0.08 0.10 0.15" />
+        </feComponentTransfer>
+      </filter>
+
+      <!-- Direction B: Neon Saturated Stage Glow -->
+      <filter id="neon-stage">
+        <feColorMatrix type="matrix" values="
+          1.25 0    0    0 0.05
+          0    1.05 0    0 0.00
+          0    0    1.15 0 0.02
+          0    0    0    1 0" />
+      </filter>
+
+      <!-- Direction C: High-Contrast Monolith Silver B&W with Crisp Highlights -->
+      <filter id="monolith-bw">
+        <feColorMatrix type="matrix" values="
+          0.30 0.59 0.11 0 0
+          0.30 0.59 0.11 0 0
+          0.30 0.59 0.11 0 0
+          0    0    0    1 0" />
+        <feComponentTransfer>
+          <feFuncR type="linear" slope="1.3" intercept="-0.15" />
+          <feFuncG type="linear" slope="1.3" intercept="-0.15" />
+          <feFuncB type="linear" slope="1.3" intercept="-0.15" />
+        </feComponentTransfer>
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- TOP APP BAR -->
+  <header class="app-header">
+    <div class="header-left">
+      <div class="brand-crest-mini" id="miniCrest"></div>
+      <div class="brand-meta">
+        <h1 class="brand-name" id="appBrandTitle">TUNKOW</h1>
+        <span class="brand-sub">Rebranding Bodgo Skatz &bull; Visual Identity Lab</span>
+      </div>
+    </div>
+
+    <!-- Direction Switcher Tabs -->
+    <nav class="direction-nav">
+      <button class="dir-tab" data-dir="a">
+        <span class="tab-num">DIR A</span>
+        <span class="tab-label">El Lek Urbano</span>
+        <span class="tab-desc">Berlin Riso / Gig-Poster</span>
+      </button>
+      <button class="dir-tab" data-dir="b">
+        <span class="tab-num">DIR B</span>
+        <span class="tab-label">Tropical Post-Punk</span>
+        <span class="tab-desc">Neon Brass / Festival</span>
+      </button>
+      <button class="dir-tab active" data-dir="c">
+        <span class="tab-num">DIR C</span>
+        <span class="tab-label">Andean Modernist</span>
+        <span class="tab-desc">Geometric Crest / Monolith</span>
+      </button>
+      <button class="dir-tab compare-tab" data-view="compare">
+        <span class="tab-num">VS</span>
+        <span class="tab-label">3-Way Comparison</span>
+        <span class="tab-desc">Side-by-side Matrix</span>
+      </button>
+    </nav>
+
+    <div class="header-right-tools">
+      <button class="theme-toggle-btn" id="btnToggleTheme" title="Toggle Light / Dark Studio">
+        <span id="themeIcon">☀️</span> <span id="themeLabel">Light Gallery</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN STUDIO VIEW -->
+  <main class="studio-container" id="mainStudio">
+
+    <!-- SUB-NAVIGATION BAR -->
+    <div class="subnav-bar">
+      <div class="subnav-pills">
+        <button class="pill active" data-section="overview">1. Direction DNA</button>
+        <button class="pill" data-section="logos">2. Logo & Crest Suite</button>
+        <button class="pill" data-section="mockups">3. Live Poster, Album & Web</button>
+        <button class="pill" data-section="gallery">4. Photo Moodboard (30 Photos)</button>
+        <button class="pill" data-section="merch">5. Merch Studio</button>
+      </div>
+      <div class="active-dir-badge" id="activeBadge">
+        <span class="pulse-dot"></span>
+        <span id="badgeText">Direction A Active</span>
+      </div>
+    </div>
+
+    <!-- SECTION 1: DIRECTION DNA & COLOR PALETTE -->
+    <section class="studio-section active" id="sec-overview">
+      <div class="section-grid-2col">
+        <!-- Direction Narrative & Metaphor -->
+        <div class="dna-card">
+          <span class="dna-tag" id="dirConceptTag">CONCEPT ARCHITECTURE</span>
+          <h2 class="dna-title" id="dirTitle">El Lek Urbano</h2>
+          <p class="dna-lead" id="dirLead">Raw Berlin underground energy meets Peruvian wild ritual. The 9-piece brass ensemble treated as a high-decibel mating dance of brass, drums, and crowd sweat.</p>
+          
+          <div class="dna-attributes" id="dirAttributes">
+            <!-- Dynamic attributes inserted by JS -->
+          </div>
+
+          <div class="bird-metaphor-box">
+            <div class="bird-icon-col" id="dnaBirdBox"></div>
+            <div class="bird-text-col">
+              <h4>The Tunqui Connection</h4>
+              <p id="birdMetaphorText">The Andean Cock-of-the-rock gathers in raucous communal dance rings (leks) where males flap fiery scarlet plumage and jump violently to attract the crowd. This is literally Tunkow on stage in Kreuzberg.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Color Palette System -->
+        <div class="palette-card">
+          <div class="palette-header">
+            <h3>Tunqui Color Architecture</h3>
+            <span class="palette-hint">Click any swatch to copy HEX code</span>
+          </div>
+          <div class="palette-swatches" id="paletteGrid">
+            <!-- Dynamic swatches inserted by JS -->
+          </div>
+
+          <!-- Typography Hierarchy Preview -->
+          <div class="typography-preview-box">
+            <h4>Typography Pairing</h4>
+            <div class="type-sample-display" id="typeSampleDisplay">
+              <div class="type-row">
+                <span class="type-role">DISPLAY HEADLINE</span>
+                <span class="type-demo-title" id="typeHeadlineDemo">TUNKOW LIVE AT SO36</span>
+                <span class="type-font-info" id="typeFontDisplayInfo">Anton / Bebas Neue (Heavy Condensed)</span>
+              </div>
+              <div class="type-row">
+                <span class="type-role">SUBHEAD / ACCENT</span>
+                <span class="type-demo-sub" id="typeSubDemo">LATIN SKA RIOT &bull; 9-PIECE BRASS FORCE &bull; BERLIN</span>
+                <span class="type-font-info" id="typeFontSubInfo">Space Mono (700 Bold Monospace)</span>
+              </div>
+              <div class="type-row">
+                <span class="type-role">BODY & EDITORIAL</span>
+                <span class="type-demo-body" id="typeBodyDemo">Explosive offbeat syncopations driving brass riffs through the heart of the night. Born from the Andean cloud forests, resurrected in the Berlin underground.</span>
+                <span class="type-font-info" id="typeFontBodyInfo">Plus Jakarta Sans / Inter (Clean Modern Sans)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: LOGO & CREST SUITE -->
+    <section class="studio-section" id="sec-logos">
+      <div class="logos-container">
+        <div class="logos-header">
+          <div>
+            <h2>Tunkow Logo & Crest Architecture</h2>
+            <p>Vector wordmarks and the iconic Tunqui crest designed for maximum punch across physical merch, vinyl center labels, and festival banners.</p>
+          </div>
+          <button class="btn-primary" id="btnDownloadLogoSvg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Export Active Logo SVG
+          </button>
+        </div>
+
+        <div class="logo-showcase-grid">
+          <!-- Main Hero Logo Canvas -->
+          <div class="logo-hero-canvas" id="logoHeroCanvas">
+            <div class="logo-canvas-inner" id="activeLogoRender">
+              <!-- Rendered vector SVG inserted by JS -->
+            </div>
+          </div>
+
+          <!-- Color Variations Testing -->
+          <div class="logo-variants-col">
+            <div class="logo-variant-card bg-dark">
+              <span class="variant-label">ON MIDNIGHT CARBON</span>
+              <div class="variant-render" id="variantDark"></div>
+            </div>
+            <div class="logo-variant-card bg-red">
+              <span class="variant-label">ON TUNQUI SCARLET</span>
+              <div class="variant-render" id="variantRed"></div>
+            </div>
+            <div class="logo-variant-card bg-light">
+              <span class="variant-label">ON NEWSPRINT WHITE</span>
+              <div class="variant-render" id="variantLight"></div>
+            </div>
+            <div class="logo-variant-card bg-photo" id="variantPhotoCard">
+              <span class="variant-label">OVERLAID ON CONCERT PHOTO</span>
+              <div class="variant-render" id="variantPhoto"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Crest Icon Breakdown -->
+        <div class="crest-breakdown-card">
+          <div class="crest-left">
+            <div class="crest-large-display" id="crestLargeDisplay"></div>
+          </div>
+          <div class="crest-right">
+            <span class="crest-tag">ICONIC IDENTIFIER</span>
+            <h3 id="crestNameTitle">The Tunqui Crest Mark</h3>
+            <p id="crestExplanation">The defining visual trademark: capturing the Andean Cock-of-the-rock's unique rounded disk-crest plumage. Acts as an instant shorthand for the band on drumheads, stamps, social avatars, and lapel pins.</p>
+            <div class="crest-specs-grid">
+              <div class="spec-item">
+                <span class="spec-label">GEOMETRY</span>
+                <span class="spec-value" id="specGeometry">Concentric Disc & Beak Cut</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">STAMP READABILITY</span>
+                <span class="spec-value">Crisp down to 16x16px</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">DRUMHEAD SUITABILITY</span>
+                <span class="spec-value">High impact silhouette</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">SCALABILITY</span>
+                <span class="spec-value">Infinite vector precision</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: LIVE APPLICATION MOCKUPS -->
+    <section class="studio-section" id="sec-mockups">
+      <div class="mockups-header">
+        <div>
+          <h2>Real-World Band Applications</h2>
+          <p>Test the brand identity on live concert posters, 12" vinyl gatefolds, and an interactive full-page band website hero.</p>
+        </div>
+        <div class="mockup-controls">
+          <label>Select Photo for Mockups:</label>
+          <select id="mockupPhotoSelect" class="styled-select"></select>
+          <button id="btnShuffleMockupPhoto" class="btn-secondary">Random Photo</button>
+        </div>
+      </div>
+
+      <div class="mockup-tabs">
+        <button class="mock-tab active" data-mock="poster">Gig Poster Generator</button>
+        <button class="mock-tab" data-mock="vinyl">12" Vinyl Album Sleeve</button>
+        <button class="mock-tab" data-mock="website">Interactive Website Hero</button>
+      </div>
+
+      <!-- MOCKUP CONTAINER -->
+      <div class="mockup-viewport">
+        <!-- 1. GIG POSTER MOCKUP -->
+        <div class="mock-panel active" id="mockPanelPoster">
+          <div class="poster-stage">
+            <div class="live-poster-frame" id="livePosterFrame">
+              <div class="poster-bg-img" id="posterBgImg"></div>
+              <div class="poster-texture-overlay" id="posterTexture"></div>
+              
+              <div class="poster-content">
+                <div class="poster-top-bar">
+                  <span class="poster-badge" id="posterPresents">RAW BRASS PRODUCTIONS PRESENTS</span>
+                  <span class="poster-date-top" id="posterDateTop">FRIDAY 24 OCT &bull; BERLIN</span>
+                </div>
+
+                <div class="poster-band-name" id="posterLogoArea">
+                  <!-- Injected Logo/Wordmark -->
+                </div>
+
+                <div class="poster-subtag" id="posterSubtag">
+                  9-PIECE ANDEAN SKA &bull; BRASS EXPLOSION &bull; LIVE IN CONCERT
+                </div>
+
+                <div class="poster-footer">
+                  <div class="poster-venue-box">
+                    <span class="venue-label">VENUE</span>
+                    <span class="venue-name" id="posterVenue">SO36 BERLIN-KREUZBERG</span>
+                    <span class="venue-details">ORANIENSTR. 190 &bull; DOORS 20:00 &bull; SHOW 21:00</span>
+                  </div>
+                  <div class="poster-lineup-box">
+                    <span class="lineup-label">SUPPORT & GUESTS</span>
+                    <span class="lineup-names">CUMBIA DISCOS DJS &bull; SPECIAL HORN SECTION</span>
+                  </div>
+                  <div class="poster-ticket-box">
+                    <span class="ticket-price">18€ VVK / 22€ AK</span>
+                    <span class="ticket-url">TICKETS: TUNKOW.COM/TOUR</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Poster customization panel -->
+            <div class="poster-customizer-card">
+              <h3>Poster Customizer</h3>
+              <p>Change details in real-time or pick any concert photo to feature:</p>
+              <div class="form-group">
+                <label>Venue Name:</label>
+                <input type="text" id="inputVenue" value="SO36 BERLIN-KREUZBERG" class="styled-input">
+              </div>
+              <div class="form-group">
+                <label>Event Date:</label>
+                <input type="text" id="inputDate" value="FRIDAY 24 OCT &bull; BERLIN" class="styled-input">
+              </div>
+              <div class="form-group">
+                <label>Headline Tagline:</label>
+                <input type="text" id="inputTagline" value="LATIN SKA RIOT &bull; 9-PIECE BRASS FORCE" class="styled-input">
+              </div>
+              <div class="action-buttons-row">
+                <button class="btn-primary" id="btnExportPosterPng">Print / Save Poster</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. VINYL SLEEVE MOCKUP -->
+        <div class="mock-panel" id="mockPanelVinyl">
+          <div class="vinyl-mockup-wrapper">
+            <div class="vinyl-record-assembly">
+              <div class="vinyl-disc">
+                <div class="vinyl-grooves"></div>
+                <div class="vinyl-label" id="vinylCenterLabel">
+                  <div class="label-crest" id="vinylCrest"></div>
+                  <span class="label-band">TUNKOW</span>
+                  <span class="label-album" id="vinylAlbumSide">SIDE A &bull; 33 1/3 RPM</span>
+                  <span class="label-track">1. EL SALTO DEL TUNQUI (3:45)</span>
+                  <span class="label-track">2. KREUZBERG CUMBIA SKA (4:12)</span>
+                </div>
+              </div>
+              <div class="vinyl-sleeve" id="vinylSleeve">
+                <div class="sleeve-art" id="vinylSleeveArt"></div>
+                <div class="sleeve-overlay">
+                  <div class="sleeve-header">
+                    <span class="stereo-badge">STEREO &bull; TUN-001-LP</span>
+                    <span class="sleeve-crest-icon" id="sleeveCrest"></span>
+                  </div>
+                  <div class="sleeve-title-block">
+                    <h2 class="sleeve-band-name" id="sleeveBand">TUNKOW</h2>
+                    <h3 class="sleeve-album-name" id="sleeveAlbumTitle">EL LEK URBANO</h3>
+                    <p class="sleeve-credits">RECORDED LIVE IN BERLIN &bull; 9-PIECE ORCHESTRA</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. INTERACTIVE WEBSITE HERO MOCKUP -->
+        <div class="mock-panel" id="mockPanelWebsite">
+          <div class="browser-frame">
+            <div class="browser-topbar">
+              <div class="browser-dots">
+                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+              </div>
+              <div class="browser-url-bar">https://tunkow.com</div>
+              <div class="browser-actions">
+                <span>EN</span> | <span>ES</span> | <span>DE</span>
+              </div>
+            </div>
+
+            <!-- The Live Web Hero -->
+            <div class="web-hero-content" id="webHeroContainer">
+              <div class="web-hero-bg" id="webHeroBg"></div>
+              <div class="web-hero-overlay"></div>
+              
+              <!-- Web Nav -->
+              <nav class="web-nav">
+                <div class="web-nav-brand" id="webNavBrand">TUNKOW</div>
+                <div class="web-nav-links">
+                  <a href="#music">MUSIC</a>
+                  <a href="#tour">TOUR DATES <span class="nav-tour-count">4</span></a>
+                  <a href="#band">THE 9-PIECE</a>
+                  <a href="#merch">MERCH</a>
+                  <a href="#contact">BOOKING</a>
+                </div>
+                <button class="web-nav-btn">TICKETS</button>
+              </nav>
+
+              <!-- Hero Main Headline & Actions -->
+              <div class="web-hero-body">
+                <div class="web-hero-tag" id="webHeroTag">NEW ALBUM & TOUR ANNOUNCED</div>
+                <h1 class="web-hero-title" id="webHeroTitle">TUNKOW</h1>
+                <p class="web-hero-desc" id="webHeroDesc">The 9-piece Latin Ska brass force from Berlin. Blending Peruvian Andean rhythms, explosive horn arrangements, and raw European punk velocity.</p>
+                
+                <div class="web-hero-cta-row">
+                  <button class="btn-web-primary" id="btnWebListen">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                    LISTEN TO NEW SINGLE
+                  </button>
+                  <button class="btn-web-secondary">SEE TOUR CALENDAR</button>
+                </div>
+
+                <!-- Web Tour Ticker Bar -->
+                <div class="web-tour-ticker">
+                  <div class="ticker-label">NEXT LIVE SHOWS:</div>
+                  <div class="ticker-dates">
+                    <span class="t-item"><b>OCT 24</b> SO36 BERLIN [TICKETS]</span>
+                    <span class="t-sep">&bull;</span>
+                    <span class="t-item"><b>NOV 08</b> KÖLN GEBÄUDE 9</span>
+                    <span class="t-sep">&bull;</span>
+                    <span class="t-item"><b>NOV 15</b> HAMBURG HAFENKLANG</span>
+                    <span class="t-sep">&bull;</span>
+                    <span class="t-item"><b>NOV 29</b> BARCELONA PARC DEL FÒRUM</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: THE 30-PHOTO DYNAMIC MOODBOARD & FILTER LAB -->
+    <section class="studio-section" id="sec-gallery">
+      <div class="gallery-header">
+        <div>
+          <h2>Tunkow Visual Moodboard (30 Photos)</h2>
+          <p>All band concert photos dynamically graded with the active direction's color science and grain texture. Click any photo to inspect, toggle high-res, or assign to poster/album.</p>
+        </div>
+        <div class="gallery-toolbar">
+          <div class="filter-pills">
+            <button class="g-pill active" data-filter="all">All (30)</button>
+            <button class="g-pill" data-filter="landscape">Stage / Wide (7)</button>
+            <button class="g-pill" data-filter="portrait">Intense / Solo (23)</button>
+          </div>
+          <button class="btn-secondary" id="btnShufflePhotos">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+            Shuffle Layout
+          </button>
+          <div class="layout-toggles">
+            <button class="l-btn active" data-layout="masonry" title="Masonry Grid">Grid</button>
+            <button class="l-btn" data-layout="editorial" title="Editorial Magazine">Editorial</button>
+            <button class="l-btn" data-layout="contact" title="Analog Contact Sheet">Contact</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Adjustment Controls -->
+      <div class="photo-adjust-bar">
+        <div class="adjust-control">
+          <label>Filter Style:</label>
+          <span class="current-filter-name" id="filterNameDisplay">Direction A Riso Duotone</span>
+        </div>
+        <div class="adjust-control">
+          <label>Grain / Halftone:</label>
+          <input type="range" id="sliderGrain" min="0" max="100" value="70">
+        </div>
+        <div class="adjust-control">
+          <label>Red Intensity:</label>
+          <input type="range" id="sliderRed" min="50" max="150" value="100">
+        </div>
+        <div class="adjust-control">
+          <label>Contrast:</label>
+          <input type="range" id="sliderContrast" min="80" max="160" value="120">
+        </div>
+        <button class="btn-ghost" id="btnResetAdjust">Reset</button>
+      </div>
+
+      <!-- The Dynamic Photo Grid -->
+      <div class="moodboard-grid layout-masonry" id="moodboardGrid">
+        <!-- Injected dynamically by JS -->
+      </div>
+    </section>
+
+    <!-- SECTION 5: MERCH STUDIO -->
+    <section class="studio-section" id="sec-merch">
+      <div class="merch-header">
+        <div>
+          <h2>Physical Merch Visualizer</h2>
+          <p>How Tunkow's new branding translates into high-revenue merchandise: heavyweight screenprinted tees, tour hoodies, embroidered beanies, and tote bags.</p>
+        </div>
+      </div>
+
+      <div class="merch-grid">
+        <!-- Black Heavyweight Tee -->
+        <div class="merch-item">
+          <div class="merch-preview-stage tee-black">
+            <div class="tee-outline">
+              <div class="tee-print-area" id="teeBlackPrint">
+                <!-- Injected crest / logo -->
+              </div>
+            </div>
+          </div>
+          <div class="merch-meta">
+            <h4>Tour T-Shirt (Carbon Black)</h4>
+            <p>240gsm heavyweight cotton with screenprinted Tunqui crest in high-density discharge scarlet ink.</p>
+          </div>
+        </div>
+
+        <!-- Off-white / Red Tee -->
+        <div class="merch-item">
+          <div class="merch-preview-stage tee-white">
+            <div class="tee-outline">
+              <div class="tee-print-area" id="teeWhitePrint">
+                <!-- Injected crest / logo -->
+              </div>
+            </div>
+          </div>
+          <div class="merch-meta">
+            <h4>Raw Canvas T-Shirt (Bone White)</h4>
+            <p>Unbleached organic cotton with distressed front graphic and back tour dates.</p>
+          </div>
+        </div>
+
+        <!-- Canvas Tote Bag -->
+        <div class="merch-item">
+          <div class="merch-preview-stage tote-bag">
+            <div class="tote-outline">
+              <div class="tote-print-area" id="totePrint">
+                <!-- Injected crest / logo -->
+              </div>
+            </div>
+          </div>
+          <div class="merch-meta">
+            <h4>Heavy Canvas Tote</h4>
+            <p>High-contrast gig bag for vinyl records and festival gear.</p>
+          </div>
+        </div>
+
+        <!-- Enamel Pin & Sticker Pack -->
+        <div class="merch-item">
+          <div class="merch-preview-stage pin-badge-stage">
+            <div class="pin-badge" id="pinBadge">
+              <!-- Injected crest -->
+            </div>
+            <div class="die-cut-sticker" id="dieCutSticker">
+              <!-- Injected crest -->
+            </div>
+          </div>
+          <div class="merch-meta">
+            <h4>Hard Enamel Pin & Die-Cut Sticker</h4>
+            <p>Die-cut Tunqui crest badge in polished gunmetal and vivid red hard enamel.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- COMPARE MATRIX VIEW (MODAL / FULLSCREEN) -->
+  <section class="compare-view-container" id="compareView" style="display: none;">
+    <div class="compare-header">
+      <div>
+        <h2>3-Way Brand Direction Comparison Matrix</h2>
+        <p>Direct side-by-side analysis of how each direction handles the core logo, colors, typography, and photo treatment on the exact same photo.</p>
+      </div>
+      <button class="btn-secondary" id="btnCloseCompare">Back to Studio</button>
+    </div>
+
+    <div class="compare-columns-grid">
+      <!-- COLUMN DIR A -->
+      <div class="compare-col dir-a-theme">
+        <div class="col-head">
+          <span class="col-tag">DIRECTION A</span>
+          <h3>El Lek Urbano</h3>
+          <span class="col-vibe">Berlin Underground / Riso / Gig-Poster</span>
+        </div>
+        <div class="col-logo-sample" id="compareLogoA"></div>
+        <div class="col-swatches" id="compareSwatchesA"></div>
+        <div class="col-type-sample">
+          <span class="big-type-sample font-a">TUNKOW</span>
+          <span class="sub-type-sample font-mono">SO36 BERLIN &bull; 9-PIECE BRASS</span>
+        </div>
+        <div class="col-photo-sample photo-a" id="comparePhotoA"></div>
+        <ul class="col-pros">
+          <li><strong>Energy:</strong> 10/10 raw, counter-culture, DIY credibility.</li>
+          <li><strong>Berlin Fit:</strong> Flawless for Kreuzberg clubs, cassette tapes, paste-up street walls.</li>
+          <li><strong>Risk:</strong> Can skew gritty if not paired with disciplined layout.</li>
+        </ul>
+        <button class="btn-primary select-dir-btn" data-choose="a">Select Direction A</button>
+      </div>
+
+      <!-- COLUMN DIR B -->
+      <div class="compare-col dir-b-theme">
+        <div class="col-head">
+          <span class="col-tag">DIRECTION B</span>
+          <h3>Tropical Post-Punk</h3>
+          <span class="col-vibe">Neon Brass / Festival / High-Saturation</span>
+        </div>
+        <div class="col-logo-sample" id="compareLogoB"></div>
+        <div class="col-swatches" id="compareSwatchesB"></div>
+        <div class="col-type-sample">
+          <span class="big-type-sample font-b">TUNKOW</span>
+          <span class="sub-type-sample font-sans">PRIMAVERA SOUND &bull; LATIN SKA</span>
+        </div>
+        <div class="col-photo-sample photo-b" id="comparePhotoB"></div>
+        <ul class="col-pros">
+          <li><strong>Energy:</strong> Saturated, celebratory, euphoric, explosive.</li>
+          <li><strong>Commercial Fit:</strong> Ready for international festival stages, Spotify editorial, Apple Music.</li>
+          <li><strong>Risk:</strong> Requires high quality stage lighting photos.</li>
+        </ul>
+        <button class="btn-primary select-dir-btn" data-choose="b">Select Direction B</button>
+      </div>
+
+      <!-- COLUMN DIR C -->
+      <div class="compare-col dir-c-theme">
+        <div class="col-head">
+          <span class="col-tag">DIRECTION C</span>
+          <h3>Andean Modernist</h3>
+          <span class="col-vibe">Geometric Crest / Swiss Grid / Monolith</span>
+        </div>
+        <div class="col-logo-sample" id="compareLogoC"></div>
+        <div class="col-swatches" id="compareSwatchesC"></div>
+        <div class="col-type-sample">
+          <span class="big-type-sample font-c">TUNKOW</span>
+          <span class="sub-type-sample font-geo">ANDEAN BRASS VANGUARD</span>
+        </div>
+        <div class="col-photo-sample photo-c" id="comparePhotoC"></div>
+        <ul class="col-pros">
+          <li><strong>Energy:</strong> Timeless, museum-grade, iconic disc crest.</li>
+          <li><strong>Merch Fit:</strong> Looks like a high-end streetwear or boutique vinyl label.</li>
+          <li><strong>Risk:</strong> Might feel intellectual if stripped of concert chaos.</li>
+        </ul>
+        <button class="btn-primary select-dir-btn" data-choose="c">Select Direction C</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX MODAL FOR INDIVIDUAL PHOTOS -->
+  <dialog class="lightbox-modal" id="lightboxModal">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="btnCloseLightbox">&times;</button>
+      <div class="lightbox-img-wrapper">
+        <img id="lightboxImg" src="" alt="Tunkow Concert Photo">
+      </div>
+      <div class="lightbox-actions-bar">
+        <div class="lightbox-meta">
+          <span id="lbFilename">IMG_9324.jpg</span>
+          <span id="lbDimensions">3872 &times; 5808 px</span>
+        </div>
+        <div class="lb-buttons">
+          <button class="btn-secondary" id="lbSetPoster">Set as Gig Poster Photo</button>
+          <button class="btn-secondary" id="lbSetVinyl">Set as Vinyl Sleeve Photo</button>
+          <button class="btn-secondary" id="lbSetWeb">Set as Website Hero</button>
+          <a class="btn-primary" id="lbOpenOriginal" target="_blank">View Original High-Res</a>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- TOAST NOTIFICATION FOR COPY HEX -->
+  <div class="toast-notice" id="toastNotice">Copied HEX code!</div>
+
+  <script src="app.js"></script>
+</body>
+</html>

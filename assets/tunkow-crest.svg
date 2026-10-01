@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <!-- TUNKOW Tunqui Disc Crest Emblem (Official Icon) -->
+  <defs>
+    <style>
+      .crest-ring { fill: #0C0D0F; stroke: #D81616; stroke-width: 6; }
+      .crest-fan { fill: #D81616; }
+      .crest-beak { fill: #FAFAFA; }
+      .crest-eye { fill: #0C0D0F; }
+    </style>
+  </defs>
+
+  <!-- Base Basalt Ring -->
+  <circle cx="100" cy="100" r="92" class="crest-ring" />
+
+  <!-- The Tunqui Fan Crest (Cock-of-the-rock spherical disk plumage) -->
+  <circle cx="100" cy="94" r="54" class="crest-fan" />
+
+  <!-- Minimalist Geometric Beak Wedge -->
+  <polygon points="112,94 170,106 112,122" class="crest-beak" />
+
+  <!-- Bird Eye Coordinate -->
+  <circle cx="86" cy="90" r="10" class="crest-eye" />
+  <circle cx="89" cy="88" r="3.5" fill="#FAFAFA" />
+</svg>
