@@ -853,6 +853,222 @@ body {
   color: var(--color-text-main);
 }
 
+/* Tactile & Non-Vector Logo Foundry */
+.tactile-foundry-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.tactile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.tactile-bg-toggles {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.35rem 0.6rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.toggle-label {
+  font-size: 0.62rem;
+  font-family: var(--font-sub);
+  color: var(--color-text-muted);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-right: 0.25rem;
+}
+
+.surface-btn {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--color-text-muted);
+  font-family: var(--font-sub);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.surface-btn:hover {
+  color: var(--color-text-main);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.surface-btn.active {
+  background: var(--color-primary);
+  color: #FFFFFF;
+}
+
+.tactile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.tactile-item {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-fast);
+}
+
+.tactile-item:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+.tactile-preview {
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+  transition: background 0.3s ease;
+  background: #111215;
+}
+
+/* Surface backgrounds */
+.tactile-preview.surface-chalk {
+  background: #FAFAFA !important;
+}
+.tactile-preview.surface-obsidian {
+  background: #0C0D0F !important;
+}
+.tactile-preview.surface-kraft {
+  background: #E5DCC5 !important;
+}
+.tactile-preview.surface-scarlet {
+  background: #D81616 !important;
+}
+
+.tactile-svg-img {
+  max-width: 180px;
+  max-height: 180px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.25));
+  transition: transform 0.3s ease;
+}
+
+.tactile-item:hover .tactile-svg-img {
+  transform: scale(1.05);
+}
+
+.tactile-meta {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+}
+
+.edition-badge {
+  font-family: var(--font-code);
+  font-size: 0.65rem;
+  color: var(--color-primary);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.35rem;
+  font-weight: 700;
+}
+
+.tactile-meta h4 {
+  font-family: var(--font-sub);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--color-text-main);
+}
+
+.tactile-meta p {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.tactile-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-micro {
+  font-family: var(--font-sub);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.45rem 0.85rem;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-main);
+  text-decoration: none;
+  transition: var(--transition-fast);
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-micro:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #FFFFFF;
+}
+
+/* Firefly Integration Banner */
+.firefly-integration-bar {
+  background: linear-gradient(135deg, rgba(216, 22, 22, 0.12) 0%, rgba(20, 21, 24, 0.8) 100%);
+  border: 1px solid rgba(216, 22, 22, 0.35);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.firefly-badge {
+  font-family: var(--font-sub);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--color-primary);
+  margin-bottom: 0.35rem;
+}
+
+.firefly-bar-content h4 {
+  font-size: 1.15rem;
+  margin-bottom: 0.25rem;
+}
+
+.firefly-bar-content p {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  max-width: 600px;
+}
+
 /* --------------------------------------------------------------------------
    SECTION 3: LIVE APPLICATION MOCKUPS
    -------------------------------------------------------------------------- */

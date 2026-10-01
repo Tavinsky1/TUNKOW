@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <!-- TUNKOW — Andean Modernist Artisanal Linocut Emblem -->
+  <defs>
+    <!-- Analog Paper & Linocut Rough Ink Filter -->
+    <filter id="linocut-roughness" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="4" result="paperNoise" />
+      <feDisplacementMap in="SourceGraphic" in2="paperNoise" scale="4" xChannelSelector="R" yChannelSelector="G" result="chiseledEdges" />
+      <feTurbulence type="turbulence" baseFrequency="0.65" numOctaves="3" result="inkGrain" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 18 -9" in="inkGrain" result="grainDots"/>
+      <feComposite in="chiseledEdges" in2="grainDots" operator="out" result="finalPrint" />
+    </filter>
+
+    <filter id="ink-bleed" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="3" result="bleedNoise" />
+      <feDisplacementMap in="SourceGraphic" in2="bleedNoise" scale="3" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </defs>
+
+  <g filter="url(#linocut-roughness)">
+    <!-- Base Carved Woodblock Circle (Not a perfect compass circle, but hand-gouged) -->
+    <path d="M 200,16 
+             C 275,15 348,68 376,140 
+             C 402,210 382,295 330,348 
+             C 278,400 190,405 125,378 
+             C 56,350 14,282 16,202 
+             C 18,124 72,50 148,22 
+             Z" 
+          fill="#101114" />
+
+    <!-- Outer Hand-Chiseled Border Rim (Negative Space) -->
+    <path d="M 200,32 
+             C 285,30 360,95 362,185 
+             C 364,275 295,355 200,358 
+             C 110,356 38,280 40,192 
+             C 42,105 112,34 200,32 Z" 
+          fill="none" 
+          stroke="#F6F3EB" 
+          stroke-width="5" 
+          stroke-dasharray="14 4 28 6 8 4" />
+
+    <!-- THE TUNQUI DISK PLUMAGE (Deep Scarlet Mineral Red Fan) -->
+    <!-- Hand-carved organic shape representing the male Tunqui's iconic bulbous head crest -->
+    <path d="M 198,72 
+             C 255,70 300,105 312,160 
+             C 322,210 295,255 250,278 
+             C 205,300 145,290 115,252 
+             C 85,215 88,150 120,105 
+             C 142,78 170,72 198,72 Z" 
+          fill="#D81616" />
+
+    <!-- Plumage Woodcut Relief Gouges (Negative relief strokes radiating across the crest) -->
+    <g fill="none" stroke="#101114" stroke-width="4.5" stroke-linecap="round">
+      <!-- Radiating crest feathers -->
+      <path d="M 198,82 C 196,110 192,145 186,175" />
+      <path d="M 228,88 C 220,118 210,152 198,185" />
+      <path d="M 258,105 C 245,135 228,168 210,196" />
+      <path d="M 282,132 C 265,158 244,188 220,210" />
+      <path d="M 296,168 C 275,188 252,210 226,225" />
+      <path d="M 290,208 C 268,222 245,234 220,242" />
+      <path d="M 270,242 C 250,250 230,256 208,260" />
+
+      <!-- Inner crown relief cuts -->
+      <path d="M 168,88 C 172,115 174,142 172,170" />
+      <path d="M 140,106 C 148,130 156,155 160,180" />
+      <path d="M 120,135 C 132,154 144,174 152,196" />
+      <path d="M 112,172 C 126,188 140,202 155,216" />
+    </g>
+
+    <!-- ANDEAN CHISELED BEAK (Sharp geometric bone wedge cutting into the plumage) -->
+    <polygon points="218,172 352,202 216,236" fill="#F6F3EB" />
+    <!-- Beak Chisel Centerline & Nostril Groove -->
+    <path d="M 218,202 L 340,202" stroke="#101114" stroke-width="4" stroke-linecap="round" />
+    <circle cx="242" cy="192" r="3.5" fill="#101114" />
+
+    <!-- THE SACRED EYE (Concentric Andean Watcher Rings) -->
+    <circle cx="168,172" r="22" fill="#101114" />
+    <circle cx="168,172" r="16" fill="#D81616" />
+    <circle cx="168,172" r="9" fill="#F6F3EB" />
+    <circle cx="166,170" r="4.5" fill="#101114" />
+    <!-- Highlight spark -->
+    <circle cx="164,167" r="1.8" fill="#F6F3EB" />
+
+    <!-- LOWER ANDEAN STEPPED FRET / CHAKANA WING BASE -->
+    <g fill="#F6F3EB">
+      <!-- Stepped neck plumes (Pre-Columbian geometric staircase motif) -->
+      <polygon points="98,248 126,248 126,270 98,270" />
+      <polygon points="126,270 156,270 156,294 126,294" />
+      <polygon points="156,294 188,294 188,318 156,318" />
+      <polygon points="188,318 222,318 222,342 188,342" />
+
+      <!-- Dynamic cut notches -->
+      <polygon points="76,218 96,230 78,244" />
+      <polygon points="86,260 108,272 90,286" />
+      <polygon points="112,298 134,310 116,324" />
+    </g>
+
+    <!-- BRASS ENERGY RAYS (Ska / Horn blast acoustic lines emerging from the beak) -->
+    <g stroke="#D81616" stroke-width="4.5" stroke-linecap="round">
+      <line x1="346" y1="168" x2="374" y2="152" />
+      <line x1="364" y1="202" x2="394" y2="202" />
+      <line x1="346" y1="236" x2="374" y2="252" />
+    </g>
+  </g>
+</svg>

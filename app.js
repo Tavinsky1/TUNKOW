@@ -99,27 +99,43 @@ const LOGOS = {
     </svg>`
   },
 
-  // DIRECTION C: Andean Modernist (Geometric Monolith)
+  // DIRECTION C: Andean Modernist (Geometric Monolith & Lek Crest)
   c: {
     crest: `<svg viewBox="0 0 100 100" class="svg-crest">
-      <!-- Pure circular disc crest emblem (Bauhaus + Pre-Columbian) -->
-      <circle cx="50" cy="50" r="44" fill="#141518" stroke="#D81616" stroke-width="4" />
-      <!-- The round disc head -->
-      <circle cx="50" cy="46" r="26" fill="#D81616" />
-      <!-- Clean geometric beak quadrant -->
-      <polygon points="56,46 84,52 56,60" fill="#FAFAFA" />
-      <!-- Minimalist eye -->
-      <circle cx="44" cy="44" r="5" fill="#141518" />
+      <!-- Andean Modernist Tunqui Crest (Artisanal Lek Mark) -->
+      <circle cx="50" cy="50" r="46" fill="#101114" stroke="#D81616" stroke-width="3" />
+      <!-- Radiant Plumage Disc -->
+      <path d="M 48,18 C 64,18 78,28 80,44 C 82,56 74,68 62,72 C 50,78 36,74 30,64 C 22,54 24,38 32,28 C 38,20 44,18 48,18 Z" fill="#D81616" />
+      <!-- Plumage Grooves -->
+      <g stroke="#101114" stroke-width="1.8" stroke-linecap="round" fill="none">
+        <path d="M 48,22 C 48,30 46,38 44,46" />
+        <path d="M 56,24 C 54,32 52,40 48,48" />
+        <path d="M 64,30 C 60,38 56,44 52,50" />
+        <path d="M 70,38 C 64,44 60,50 54,54" />
+      </g>
+      <!-- Beak Wedge Cut -->
+      <polygon points="54,44 86,52 54,60" fill="#F6F3EB" />
+      <!-- The Concentric Eye -->
+      <circle cx="42" cy="44" r="5.5" fill="#101114" />
+      <circle cx="42" cy="44" r="3.5" fill="#D81616" />
+      <circle cx="42" cy="44" r="1.5" fill="#F6F3EB" />
+      <!-- Andean Stepped Fret Wings -->
+      <polygon points="26,62 33,62 33,68 26,68" fill="#F6F3EB" />
+      <polygon points="33,68 40,68 40,74 33,74" fill="#F6F3EB" />
+      <polygon points="40,74 48,74 48,80 40,80" fill="#F6F3EB" />
     </svg>`,
     wordmark: `<svg viewBox="0 0 460 90" class="svg-wordmark">
-      <text x="230" y="66" text-anchor="middle" font-family="'Unbounded', 'Space Grotesk', sans-serif" font-size="54" font-weight="800" letter-spacing="8" fill="#FAFAFA">
+      <text x="230" y="64" text-anchor="middle" font-family="'Unbounded', 'Space Grotesk', sans-serif" font-size="52" font-weight="900" letter-spacing="10" fill="currentColor">
         T U N K O W
       </text>
-      <circle cx="230" cy="80" r="4" fill="#D81616" />
+      <circle cx="396" cy="54" r="5" fill="#D81616" />
+      <text x="230" y="82" text-anchor="middle" font-family="'Space Grotesk', monospace" font-size="9" font-weight="700" letter-spacing="6" fill="#D81616">
+        ANDEAN BRASS VANGUARD &bull; BERLIN
+      </text>
     </svg>`,
     badge: `<svg viewBox="0 0 160 50" class="svg-badge">
-      <rect x="2" y="2" width="156" height="46" fill="none" stroke="#D81616" stroke-width="2" />
-      <text x="80" y="32" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="700" fill="#FAFAFA" letter-spacing="4">TUNKOW</text>
+      <rect x="2" y="2" width="156" height="46" fill="#101114" stroke="#D81616" stroke-width="2" />
+      <text x="80" y="32" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="16" font-weight="800" fill="#F6F3EB" letter-spacing="5">TUNKOW</text>
     </svg>`
   }
 };
@@ -256,6 +272,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initCompareMatrix();
   initSvgDownload();
   initThemeToggle();
+  initTactileFoundry();
 
   // Populate Photo Select in Mockup controls
   populateMockupPhotoSelect();
@@ -792,6 +809,23 @@ function initThemeToggle() {
       document.getElementById("themeLabel").textContent = "Dark Stage";
       showToast("Light Editorial Gallery Mode Activated");
     }
+  });
+}
+
+function initTactileFoundry() {
+  const surfaceBtns = document.querySelectorAll(".surface-btn");
+  if (!surfaceBtns.length) return;
+
+  surfaceBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      surfaceBtns.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      const surface = btn.dataset.surface;
+      document.querySelectorAll(".tactile-preview").forEach(preview => {
+        preview.className = `tactile-preview surface-${surface}`;
+      });
+      showToast(`Switched preview surface to ${surface.toUpperCase()}`);
+    });
   });
 }
 

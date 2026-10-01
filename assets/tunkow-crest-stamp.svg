@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <!-- TUNKOW — Berlin Club Risograph & Stamped Gig Edition -->
+  <defs>
+    <!-- Heavy Rubber Stamp Ink Void & Distressed Filter -->
+    <filter id="riso-distress" x="-15%" y="-15%" width="130%" height="130%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.08" numOctaves="4" result="stampGrain" />
+      <feDisplacementMap in="SourceGraphic" in2="stampGrain" scale="5" xChannelSelector="R" yChannelSelector="G" result="roughened" />
+      <feTurbulence type="turbulence" baseFrequency="0.25" numOctaves="2" result="voidNoise" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 15 -7" in="voidNoise" result="voidMask"/>
+      <feComposite in="roughened" in2="voidMask" operator="out" />
+    </filter>
+  </defs>
+
+  <g filter="url(#riso-distress)">
+    <!-- Stamped Outer Octagonal / Rounded Seal Border -->
+    <rect x="24" y="24" width="352" height="352" rx="48" fill="none" stroke="#D81616" stroke-width="14" />
+    <rect x="42" y="42" width="316" height="316" rx="36" fill="none" stroke="#101114" stroke-width="4" stroke-dasharray="16 8 8 8" />
+
+    <!-- Top & Bottom Typography Stamps -->
+    <text x="200" y="78" text-anchor="middle" font-family="'Space Grotesk', -apple-system, sans-serif" font-weight="900" font-size="28" letter-spacing="10" fill="#101114">TUNKOW</text>
+    <text x="200" y="342" text-anchor="middle" font-family="'Space Grotesk', monospace" font-weight="700" font-size="13" letter-spacing="6" fill="#D81616">9-PIECE BRASS • BERLIN</text>
+
+    <!-- Center Tunqui Totem Iconography -->
+    <!-- Heavy Stamped Crest Silhouette -->
+    <path d="M 198,102 
+             C 246,102 284,136 294,184 
+             C 302,226 278,264 238,280 
+             C 198,298 152,286 128,252 
+             C 104,218 108,166 136,130 
+             C 154,108 176,102 198,102 Z" 
+          fill="#D81616" />
+
+    <!-- Bold Cut-Out Eye & Feather Notches -->
+    <circle cx="166" cy="186" r="18" fill="#FAFAFA" />
+    <circle cx="166" cy="186" r="8" fill="#101114" />
+
+    <!-- Heavy Triangular Beak Stamp -->
+    <polygon points="214,184 326,208 212,234" fill="#101114" />
+    <polygon points="222,194 300,208 220,222" fill="#FAFAFA" />
+
+    <!-- Stamped Feather Cuts -->
+    <path d="M 190,118 C 190,140 186,164 182,184" stroke="#FAFAFA" stroke-width="6" stroke-linecap="round" fill="none" />
+    <path d="M 224,124 C 218,148 208,172 198,194" stroke="#FAFAFA" stroke-width="6" stroke-linecap="round" fill="none" />
+    <path d="M 252,142 C 240,166 226,190 210,210" stroke="#FAFAFA" stroke-width="6" stroke-linecap="round" fill="none" />
+    <path d="M 270,172 C 252,192 234,212 214,226" stroke="#FAFAFA" stroke-width="6" stroke-linecap="round" fill="none" />
+
+    <!-- Andean Stepped Base Geometry -->
+    <path d="M 120,252 L 145,252 L 145,274 L 175,274 L 175,296 L 205,296 L 205,316 L 120,316 Z" fill="#101114" />
+  </g>
+</svg>

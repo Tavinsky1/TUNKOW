@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 160" width="100%" height="100%">
+  <!-- TUNKOW — Complete Artisanal Wordmark & Crest Lockup -->
+  <defs>
+    <filter id="hand-ink" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </defs>
+
+  <g filter="url(#hand-ink)">
+    <!-- LEFT: Artisanal Tunqui Disc Crest (80x80) -->
+    <g transform="translate(24, 24) scale(0.28)">
+      <!-- Base Carved Woodblock Circle -->
+      <path d="M 200,16 C 275,15 348,68 376,140 C 402,210 382,295 330,348 C 278,400 190,405 125,378 C 56,350 14,282 16,202 C 18,124 72,50 148,22 Z" fill="#101114" />
+      <!-- Crest Plumage Fan -->
+      <path d="M 198,72 C 255,70 300,105 312,160 C 322,210 295,255 250,278 C 205,300 145,290 115,252 C 85,215 88,150 120,105 C 142,78 170,72 198,72 Z" fill="#D81616" />
+      <!-- Plumage Grooves -->
+      <g fill="none" stroke="#101114" stroke-width="6" stroke-linecap="round">
+        <path d="M 198,82 C 196,110 192,145 186,175" />
+        <path d="M 228,88 C 220,118 210,152 198,185" />
+        <path d="M 258,105 C 245,135 228,168 210,196" />
+        <path d="M 282,132 C 265,158 244,188 220,210" />
+        <path d="M 296,168 C 275,188 252,210 226,225" />
+      </g>
+      <!-- Beak -->
+      <polygon points="218,172 352,202 216,236" fill="#F6F3EB" />
+      <!-- Eye -->
+      <circle cx="168,172" r="20" fill="#101114" />
+      <circle cx="168,172" r="14" fill="#D81616" />
+      <circle cx="168,172" r="8" fill="#F6F3EB" />
+      <!-- Andean Stepped Wings -->
+      <polygon points="98,248 126,248 126,270 98,270" fill="#F6F3EB" />
+      <polygon points="126,270 156,270 156,294 126,294" fill="#F6F3EB" />
+      <polygon points="156,294 188,294 188,318 156,318" fill="#F6F3EB" />
+    </g>
+
+    <!-- RIGHT: Heavy Hand-Printed Woodblock Typography -->
+    <text x="160" y="86" font-family="'Unbounded', 'Space Grotesk', -apple-system, sans-serif" font-weight="900" font-size="56" letter-spacing="12" fill="currentColor">TUNKOW</text>
+    
+    <!-- Red Lek Energy Dot -->
+    <circle cx="560" cy="74" r="8" fill="#D81616" />
+
+    <!-- Subtitle Meta Information -->
+    <text x="164" y="122" font-family="'Space Grotesk', monospace" font-weight="700" font-size="12" letter-spacing="6" fill="#D81616">9-PIECE BRASS VANGUARD</text>
+    <text x="430" y="122" font-family="'Space Grotesk', monospace" font-weight="500" font-size="12" letter-spacing="4" fill="#717682">&bull; BERLIN &bull; EST. 2024</text>
+  </g>
+</svg>
